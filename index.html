@@ -1,0 +1,1389 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bendición - Artículos Premium para Bautizos</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Montserrat:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --color-cream: #faf8f5;
+        --color-white: #ffffff;
+        --color-gold: #c9a962;
+        --color-gold-light: #e8dcc8;
+        --color-charcoal: #2c2c2c;
+        --color-gray: #6b6b6b;
+        --color-gray-light: #9a9a9a;
+        --font-heading: "Cormorant Garamond", serif;
+        --font-body: "Montserrat", sans-serif;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        font-family: var(--font-body);
+        background-color: var(--color-cream);
+        color: var(--color-charcoal);
+        line-height: 1.6;
+      }
+
+      /* Header */
+      header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        background: var(--color-cream);
+        z-index: 1000;
+        border-bottom: 1px solid var(--color-gold-light);
+      }
+
+      .header-inner {
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 1.25rem 2rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .logo {
+        font-family: var(--font-heading);
+        font-size: 2rem;
+        font-weight: 600;
+        color: var(--color-charcoal);
+        text-decoration: none;
+        letter-spacing: 0.05em;
+      }
+
+      .logo span {
+        color: var(--color-gold);
+      }
+
+      nav {
+        display: flex;
+        align-items: center;
+        gap: 2.5rem;
+      }
+
+      nav a {
+        font-size: 0.8rem;
+        font-weight: 500;
+        color: var(--color-gray);
+        text-decoration: none;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        transition: color 0.3s ease;
+      }
+
+      nav a:hover {
+        color: var(--color-gold);
+      }
+
+      .header-actions {
+        display: flex;
+        align-items: center;
+        gap: 1.5rem;
+      }
+
+      .header-actions a {
+        color: var(--color-charcoal);
+        text-decoration: none;
+        transition: color 0.3s ease;
+      }
+
+      .header-actions a:hover {
+        color: var(--color-gold);
+      }
+
+      .cart-icon {
+        position: relative;
+      }
+
+      .cart-badge {
+        position: absolute;
+        top: -8px;
+        right: -8px;
+        background: var(--color-gold);
+        color: var(--color-white);
+        font-size: 0.65rem;
+        width: 18px;
+        height: 18px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      /* Hero Section */
+      .hero {
+        padding: 10rem 2rem 6rem;
+        text-align: center;
+        background: linear-gradient(
+          to bottom,
+          var(--color-cream) 0%,
+          var(--color-white) 100%
+        );
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .hero-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        background: var(--color-white);
+        border: 1px solid var(--color-gold-light);
+        padding: 0.5rem 1.25rem;
+        border-radius: 2rem;
+        font-size: 0.75rem;
+        font-weight: 500;
+        color: var(--color-gray);
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        margin-bottom: 2rem;
+      }
+
+      .hero-badge::before {
+        content: "";
+        width: 8px;
+        height: 8px;
+        background: var(--color-gold);
+        border-radius: 50%;
+      }
+
+      .hero h1 {
+        font-family: var(--font-heading);
+        font-size: clamp(3rem, 8vw, 6rem);
+        font-weight: 400;
+        line-height: 1.1;
+        margin-bottom: 1.5rem;
+        max-width: 900px;
+      }
+
+      .hero h1 em {
+        font-style: italic;
+        color: var(--color-gold);
+      }
+
+      .hero p {
+        font-size: 1.1rem;
+        color: var(--color-gray);
+        max-width: 600px;
+        margin: 0 auto 3rem;
+        font-weight: 300;
+      }
+
+      .hero-buttons {
+        display: flex;
+        gap: 1rem;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 1rem 2.5rem;
+        font-size: 0.8rem;
+        font-weight: 500;
+        text-transform: uppercase;
+        letter-spacing: 0.15em;
+        text-decoration: none;
+        border-radius: 0;
+        transition: all 0.3s ease;
+        cursor: pointer;
+        border: none;
+      }
+
+      .btn-primary {
+        background: var(--color-charcoal);
+        color: var(--color-white);
+      }
+
+      .btn-primary:hover {
+        background: var(--color-gold);
+      }
+
+      .btn-secondary {
+        background: transparent;
+        color: var(--color-charcoal);
+        border: 1px solid var(--color-charcoal);
+      }
+
+      .btn-secondary:hover {
+        background: var(--color-charcoal);
+        color: var(--color-white);
+      }
+
+      .hero-scroll {
+        margin-top: 4rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+        color: var(--color-gray-light);
+        font-size: 0.7rem;
+        text-transform: uppercase;
+        letter-spacing: 0.15em;
+      }
+
+      .scroll-line {
+        width: 1px;
+        height: 60px;
+        background: linear-gradient(to bottom, var(--color-gold), transparent);
+      }
+
+      /* Categories Strip */
+      .categories-strip {
+        background: var(--color-white);
+        padding: 3rem 2rem;
+        border-top: 1px solid var(--color-gold-light);
+        border-bottom: 1px solid var(--color-gold-light);
+      }
+
+      .categories-strip-inner {
+        max-width: 1400px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 4rem;
+        flex-wrap: wrap;
+      }
+
+      .category-link {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        text-decoration: none;
+        color: var(--color-charcoal);
+        font-size: 0.85rem;
+        font-weight: 500;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        transition: color 0.3s ease;
+      }
+
+      .category-link:hover {
+        color: var(--color-gold);
+      }
+
+      .category-link svg {
+        width: 24px;
+        height: 24px;
+        stroke: var(--color-gold);
+      }
+
+      /* Section Title */
+      .section-title {
+        text-align: center;
+        margin-bottom: 4rem;
+      }
+
+      .section-title span {
+        display: block;
+        font-size: 0.75rem;
+        font-weight: 500;
+        text-transform: uppercase;
+        letter-spacing: 0.2em;
+        color: var(--color-gold);
+        margin-bottom: 1rem;
+      }
+
+      .section-title h2 {
+        font-family: var(--font-heading);
+        font-size: clamp(2rem, 4vw, 3rem);
+        font-weight: 400;
+      }
+
+      /* Featured Product */
+      .featured-product {
+        padding: 6rem 2rem;
+        background: var(--color-white);
+      }
+
+      .featured-product-inner {
+        max-width: 1400px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 4rem;
+        align-items: center;
+      }
+
+      .featured-image {
+        position: relative;
+      }
+
+      .featured-image img {
+        width: 100%;
+        height: 600px;
+        object-fit: cover;
+      }
+
+      .featured-badge {
+        position: absolute;
+        top: 2rem;
+        left: 2rem;
+        background: var(--color-gold);
+        color: var(--color-white);
+        padding: 0.5rem 1.25rem;
+        font-size: 0.7rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+      }
+
+      .featured-content h3 {
+        font-family: var(--font-heading);
+        font-size: 2.5rem;
+        font-weight: 400;
+        margin-bottom: 1rem;
+      }
+
+      .featured-content .price {
+        font-family: var(--font-heading);
+        font-size: 1.75rem;
+        color: var(--color-gold);
+        margin-bottom: 1.5rem;
+      }
+
+      .featured-content p {
+        color: var(--color-gray);
+        margin-bottom: 2rem;
+        font-weight: 300;
+        line-height: 1.8;
+      }
+
+      .featured-details {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        margin-bottom: 2.5rem;
+        padding: 1.5rem 0;
+        border-top: 1px solid var(--color-gold-light);
+        border-bottom: 1px solid var(--color-gold-light);
+      }
+
+      .featured-detail {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        font-size: 0.85rem;
+        color: var(--color-gray);
+      }
+
+      .featured-detail svg {
+        width: 20px;
+        height: 20px;
+        stroke: var(--color-gold);
+      }
+
+      /* Bento Grid */
+      .bento-section {
+        padding: 6rem 2rem;
+        background: var(--color-cream);
+      }
+
+      .bento-grid {
+        max-width: 1400px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(2, 300px);
+        gap: 1.5rem;
+      }
+
+      .bento-item {
+        position: relative;
+        overflow: hidden;
+        cursor: pointer;
+      }
+
+      .bento-item img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.6s ease;
+      }
+
+      .bento-item:hover img {
+        transform: scale(1.05);
+      }
+
+      .bento-overlay {
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+          to top,
+          rgba(44, 44, 44, 0.8) 0%,
+          transparent 60%
+        );
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        padding: 2rem;
+        transition: background 0.3s ease;
+      }
+
+      .bento-item:hover .bento-overlay {
+        background: linear-gradient(
+          to top,
+          rgba(201, 169, 98, 0.9) 0%,
+          rgba(201, 169, 98, 0.3) 100%
+        );
+      }
+
+      .bento-overlay span {
+        font-size: 0.7rem;
+        text-transform: uppercase;
+        letter-spacing: 0.15em;
+        color: var(--color-gold-light);
+        margin-bottom: 0.5rem;
+      }
+
+      .bento-overlay h3 {
+        font-family: var(--font-heading);
+        font-size: 1.5rem;
+        color: var(--color-white);
+        font-weight: 400;
+      }
+
+      .bento-item:nth-child(1) {
+        grid-column: span 2;
+        grid-row: span 2;
+      }
+
+      .bento-item:nth-child(1) .bento-overlay h3 {
+        font-size: 2.5rem;
+      }
+
+      /* Products Grid */
+      .products-section {
+        padding: 6rem 2rem;
+        background: var(--color-white);
+      }
+
+      .products-grid {
+        max-width: 1400px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 2rem;
+      }
+
+      .product-card {
+        cursor: pointer;
+      }
+
+      .product-image {
+        position: relative;
+        overflow: hidden;
+        margin-bottom: 1.5rem;
+        background: var(--color-cream);
+      }
+
+      .product-image img {
+        width: 100%;
+        height: 350px;
+        object-fit: cover;
+        transition: transform 0.5s ease;
+      }
+
+      .product-card:hover .product-image img {
+        transform: scale(1.03);
+      }
+
+      .product-actions {
+        position: absolute;
+        bottom: 1rem;
+        left: 1rem;
+        right: 1rem;
+        display: flex;
+        gap: 0.5rem;
+        opacity: 0;
+        transform: translateY(10px);
+        transition: all 0.3s ease;
+      }
+
+      .product-card:hover .product-actions {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      .product-action-btn {
+        flex: 1;
+        background: var(--color-white);
+        border: none;
+        padding: 0.75rem;
+        font-size: 0.7rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        cursor: pointer;
+        transition: all 0.3s ease;
+      }
+
+      .product-action-btn:hover {
+        background: var(--color-charcoal);
+        color: var(--color-white);
+      }
+
+      .product-info {
+        text-align: center;
+      }
+
+      .product-category {
+        font-size: 0.7rem;
+        text-transform: uppercase;
+        letter-spacing: 0.15em;
+        color: var(--color-gold);
+        margin-bottom: 0.5rem;
+      }
+
+      .product-name {
+        font-family: var(--font-heading);
+        font-size: 1.25rem;
+        color: var(--color-charcoal);
+        margin-bottom: 0.5rem;
+      }
+
+      .product-price {
+        font-size: 0.95rem;
+        color: var(--color-gray);
+      }
+
+      .product-price .old-price {
+        text-decoration: line-through;
+        color: var(--color-gray-light);
+        margin-right: 0.5rem;
+      }
+
+      /* Testimonial */
+      .testimonial-section {
+        padding: 6rem 2rem;
+        background: var(--color-cream);
+        text-align: center;
+      }
+
+      .testimonial-inner {
+        max-width: 800px;
+        margin: 0 auto;
+      }
+
+      .testimonial-quote {
+        font-family: var(--font-heading);
+        font-size: clamp(1.5rem, 3vw, 2rem);
+        font-style: italic;
+        font-weight: 400;
+        line-height: 1.6;
+        color: var(--color-charcoal);
+        margin-bottom: 2rem;
+      }
+
+      .testimonial-author {
+        font-size: 0.85rem;
+        color: var(--color-gray);
+      }
+
+      .testimonial-author strong {
+        display: block;
+        color: var(--color-charcoal);
+        font-weight: 600;
+        margin-bottom: 0.25rem;
+      }
+
+      .testimonial-stars {
+        display: flex;
+        justify-content: center;
+        gap: 0.25rem;
+        margin-bottom: 1.5rem;
+      }
+
+      .testimonial-stars svg {
+        width: 20px;
+        height: 20px;
+        fill: var(--color-gold);
+      }
+
+      /* Newsletter */
+      .newsletter-section {
+        padding: 6rem 2rem;
+        background: var(--color-charcoal);
+        text-align: center;
+      }
+
+      .newsletter-inner {
+        max-width: 600px;
+        margin: 0 auto;
+      }
+
+      .newsletter-section h2 {
+        font-family: var(--font-heading);
+        font-size: 2.5rem;
+        font-weight: 400;
+        color: var(--color-white);
+        margin-bottom: 1rem;
+      }
+
+      .newsletter-section p {
+        color: var(--color-gray-light);
+        margin-bottom: 2rem;
+        font-weight: 300;
+      }
+
+      .newsletter-form {
+        display: flex;
+        gap: 0;
+        max-width: 500px;
+        margin: 0 auto;
+      }
+
+      .newsletter-form input {
+        flex: 1;
+        padding: 1rem 1.5rem;
+        font-size: 0.9rem;
+        border: none;
+        background: var(--color-white);
+        font-family: var(--font-body);
+      }
+
+      .newsletter-form input::placeholder {
+        color: var(--color-gray-light);
+      }
+
+      .newsletter-form button {
+        padding: 1rem 2rem;
+        background: var(--color-gold);
+        color: var(--color-white);
+        border: none;
+        font-size: 0.8rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        cursor: pointer;
+        transition: background 0.3s ease;
+        font-family: var(--font-body);
+      }
+
+      .newsletter-form button:hover {
+        background: #b8983f;
+      }
+
+      /* Footer */
+      footer {
+        background: var(--color-cream);
+        padding: 4rem 2rem 2rem;
+        border-top: 1px solid var(--color-gold-light);
+      }
+
+      .footer-inner {
+        max-width: 1400px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr 1fr;
+        gap: 4rem;
+        margin-bottom: 3rem;
+      }
+
+      .footer-brand .logo {
+        display: inline-block;
+        margin-bottom: 1rem;
+      }
+
+      .footer-brand p {
+        color: var(--color-gray);
+        font-size: 0.9rem;
+        font-weight: 300;
+        line-height: 1.8;
+        max-width: 300px;
+      }
+
+      .footer-social {
+        display: flex;
+        gap: 1rem;
+        margin-top: 1.5rem;
+      }
+
+      .footer-social a {
+        width: 40px;
+        height: 40px;
+        border: 1px solid var(--color-gold-light);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--color-charcoal);
+        transition: all 0.3s ease;
+      }
+
+      .footer-social a:hover {
+        background: var(--color-gold);
+        border-color: var(--color-gold);
+        color: var(--color-white);
+      }
+
+      .footer-column h4 {
+        font-family: var(--font-heading);
+        font-size: 1.1rem;
+        font-weight: 600;
+        margin-bottom: 1.5rem;
+        color: var(--color-charcoal);
+      }
+
+      .footer-column ul {
+        list-style: none;
+      }
+
+      .footer-column li {
+        margin-bottom: 0.75rem;
+      }
+
+      .footer-column a {
+        color: var(--color-gray);
+        text-decoration: none;
+        font-size: 0.9rem;
+        transition: color 0.3s ease;
+      }
+
+      .footer-column a:hover {
+        color: var(--color-gold);
+      }
+
+      .footer-bottom {
+        max-width: 1400px;
+        margin: 0 auto;
+        padding-top: 2rem;
+        border-top: 1px solid var(--color-gold-light);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 1rem;
+      }
+
+      .footer-bottom p {
+        font-size: 0.8rem;
+        color: var(--color-gray);
+      }
+
+      .payment-methods {
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+      }
+
+      .payment-methods span {
+        font-size: 0.75rem;
+        color: var(--color-gray-light);
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+      }
+
+      /* Responsive */
+      @media (max-width: 1024px) {
+        .bento-grid {
+          grid-template-columns: repeat(2, 1fr);
+          grid-template-rows: repeat(3, 250px);
+        }
+
+        .bento-item:nth-child(1) {
+          grid-column: span 2;
+          grid-row: span 1;
+        }
+
+        .products-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+
+        .featured-product-inner {
+          grid-template-columns: 1fr;
+        }
+
+        .footer-inner {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+
+      @media (max-width: 768px) {
+        nav {
+          display: none;
+        }
+
+        .hero h1 {
+          font-size: 2.5rem;
+        }
+
+        .categories-strip-inner {
+          gap: 2rem;
+        }
+
+        .bento-grid {
+          grid-template-columns: 1fr;
+          grid-template-rows: auto;
+        }
+
+        .bento-item:nth-child(1) {
+          grid-column: span 1;
+        }
+
+        .bento-item {
+          height: 250px;
+        }
+
+        .products-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .newsletter-form {
+          flex-direction: column;
+        }
+
+        .footer-inner {
+          grid-template-columns: 1fr;
+          gap: 2rem;
+        }
+
+        .footer-bottom {
+          flex-direction: column;
+          text-align: center;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <div class="header-inner">
+        <a href="#" class="logo">Bendición<span>.</span></a>
+
+        <nav>
+          <a href="#">Inicio</a>
+          <a href="#">Colecciones</a>
+          <a href="#">Niños</a>
+          <a href="#">Niñas</a>
+          <a href="#">Souvenirs</a>
+          <a href="#">Contacto</a>
+        </nav>
+
+        <div class="header-actions">
+          <a href="#">
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+            >
+              <circle cx="11" cy="11" r="8" />
+              <path d="m21 21-4.35-4.35" />
+            </svg>
+          </a>
+          <a href="#">
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+            >
+              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+              <circle cx="12" cy="7" r="4" />
+            </svg>
+          </a>
+          <a href="#" class="cart-icon">
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+            >
+              <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z" />
+              <path d="M3 6h18" />
+              <path d="M16 10a4 4 0 0 1-8 0" />
+            </svg>
+            <span class="cart-badge">2</span>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <span class="hero-badge">Colección Bautizo 2025</span>
+      <h1>El día más <em>especial</em> merece lo mejor</h1>
+      <p>
+        Descubre nuestra exclusiva colección de trajes, vestidos y artículos de
+        souvenir para crear recuerdos inolvidables en el bautizo de tu pequeño.
+      </p>
+      <div class="hero-buttons">
+        <a href="#" class="btn btn-primary">Ver Colección</a>
+        <a href="#" class="btn btn-secondary">Reservar Cita</a>
+      </div>
+      <div class="hero-scroll">
+        <span>Descubre más</span>
+        <div class="scroll-line"></div>
+      </div>
+    </section>
+
+    <!-- Categories Strip -->
+    <section class="categories-strip">
+      <div class="categories-strip-inner">
+        <a href="#" class="category-link">
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.5"
+          >
+            <path
+              d="M20.38 3.46 16 2a4 4 0 0 1-8 0L3.62 3.46a2 2 0 0 0-1.34 2.23l.58 3.47a1 1 0 0 0 .99.84H6v10c0 1.1.9 2 2 2h8a2 2 0 0 0 2-2V10h2.15a1 1 0 0 0 .99-.84l.58-3.47a2 2 0 0 0-1.34-2.23z"
+            />
+          </svg>
+          Trajes Niño
+        </a>
+        <a href="#" class="category-link">
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.5"
+          >
+            <path d="M6 2v1a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2" />
+            <path
+              d="M4 6h16l-1.5 9.5a2 2 0 0 1-2 1.5H7.5a2 2 0 0 1-2-1.5L4 6z"
+            />
+            <path d="M8 22v-4h8v4" />
+          </svg>
+          Vestidos Niña
+        </a>
+        <a href="#" class="category-link">
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.5"
+          >
+            <path
+              d="M2 18a1 1 0 0 0 1 1h18a1 1 0 0 0 1-1v-2a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1v2z"
+            />
+            <path d="M10 10V5a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v5" />
+            <path d="M4 15v-3a6 6 0 0 1 6-6h4a6 6 0 0 1 6 6v3" />
+          </svg>
+          Zapatos
+        </a>
+        <a href="#" class="category-link">
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.5"
+          >
+            <path
+              d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"
+            />
+            <path d="m3.3 7 8.7 5 8.7-5" />
+            <path d="M12 22V12" />
+          </svg>
+          Souvenirs
+        </a>
+        <a href="#" class="category-link">
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.5"
+          >
+            <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z" />
+          </svg>
+          Accesorios
+        </a>
+      </div>
+    </section>
+
+    <!-- Featured Product -->
+    <section class="featured-product">
+      <div class="featured-product-inner">
+        <div class="featured-image">
+          <img
+            src="/placeholder.svg?height=600&width=600"
+            alt="Vestido de Bautizo Premium"
+          />
+          <span class="featured-badge">Más Vendido</span>
+        </div>
+        <div class="featured-content">
+          <div
+            class="section-title"
+            style="text-align: left; margin-bottom: 1.5rem"
+          >
+            <span>Producto Estrella</span>
+          </div>
+          <h3>Vestido Celestial de Seda y Encaje</h3>
+          <p class="price">€189.00</p>
+          <p>
+            Nuestro vestido insignia, confeccionado a mano con los más finos
+            materiales. Seda italiana de primera calidad combinada con delicados
+            encajes franceses, creando una pieza única que será el centro de
+            todas las miradas.
+          </p>
+          <div class="featured-details">
+            <div class="featured-detail">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+              >
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10" />
+              </svg>
+              100% Materiales premium certificados
+            </div>
+            <div class="featured-detail">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+              >
+                <path
+                  d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z"
+                />
+                <circle cx="12" cy="13" r="3" />
+              </svg>
+              Personalizable con bordados
+            </div>
+            <div class="featured-detail">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+              >
+                <rect x="1" y="3" width="15" height="13" rx="2" />
+                <path d="m16 8 5 3-5 3V8z" />
+              </svg>
+              Incluye caja de regalo premium
+            </div>
+          </div>
+          <a href="#" class="btn btn-primary">Añadir al Carrito</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Bento Categories -->
+    <section class="bento-section">
+      <div class="section-title">
+        <span>Explora</span>
+        <h2>Nuestras Categorías</h2>
+      </div>
+      <div class="bento-grid">
+        <div class="bento-item">
+          <img
+            src="/placeholder.svg?height=600&width=800"
+            alt="Trajes de Niño"
+          />
+          <div class="bento-overlay">
+            <span>Colección Completa</span>
+            <h3>Trajes de Niño</h3>
+          </div>
+        </div>
+        <div class="bento-item">
+          <img
+            src="/placeholder.svg?height=300&width=400"
+            alt="Vestidos de Niña"
+          />
+          <div class="bento-overlay">
+            <span>12 Productos</span>
+            <h3>Vestidos Niña</h3>
+          </div>
+        </div>
+        <div class="bento-item">
+          <img src="/placeholder.svg?height=300&width=400" alt="Zapatos" />
+          <div class="bento-overlay">
+            <span>8 Productos</span>
+            <h3>Zapatos</h3>
+          </div>
+        </div>
+        <div class="bento-item">
+          <img src="/placeholder.svg?height=300&width=400" alt="Souvenirs" />
+          <div class="bento-overlay">
+            <span>25 Productos</span>
+            <h3>Souvenirs</h3>
+          </div>
+        </div>
+        <div class="bento-item">
+          <img src="/placeholder.svg?height=300&width=400" alt="Accesorios" />
+          <div class="bento-overlay">
+            <span>15 Productos</span>
+            <h3>Accesorios</h3>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Products Grid -->
+    <section class="products-section">
+      <div class="section-title">
+        <span>Nuevas Llegadas</span>
+        <h2>Productos Destacados</h2>
+      </div>
+      <div class="products-grid">
+        <div class="product-card">
+          <div class="product-image">
+            <img
+              src="/placeholder.svg?height=350&width=300"
+              alt="Traje Romeo"
+            />
+            <div class="product-actions">
+              <button class="product-action-btn">Ver Detalles</button>
+              <button class="product-action-btn">Añadir</button>
+            </div>
+          </div>
+          <div class="product-info">
+            <p class="product-category">Trajes Niño</p>
+            <h4 class="product-name">Traje Romeo</h4>
+            <p class="product-price">€129.00</p>
+          </div>
+        </div>
+        <div class="product-card">
+          <div class="product-image">
+            <img
+              src="/placeholder.svg?height=350&width=300"
+              alt="Vestido Angelina"
+            />
+            <div class="product-actions">
+              <button class="product-action-btn">Ver Detalles</button>
+              <button class="product-action-btn">Añadir</button>
+            </div>
+          </div>
+          <div class="product-info">
+            <p class="product-category">Vestidos Niña</p>
+            <h4 class="product-name">Vestido Angelina</h4>
+            <p class="product-price">
+              <span class="old-price">€159.00</span> €135.00
+            </p>
+          </div>
+        </div>
+        <div class="product-card">
+          <div class="product-image">
+            <img
+              src="/placeholder.svg?height=350&width=300"
+              alt="Zapatos Primeros Pasos"
+            />
+            <div class="product-actions">
+              <button class="product-action-btn">Ver Detalles</button>
+              <button class="product-action-btn">Añadir</button>
+            </div>
+          </div>
+          <div class="product-info">
+            <p class="product-category">Zapatos</p>
+            <h4 class="product-name">Primeros Pasos</h4>
+            <p class="product-price">€49.00</p>
+          </div>
+        </div>
+        <div class="product-card">
+          <div class="product-image">
+            <img
+              src="/placeholder.svg?height=350&width=300"
+              alt="Set Recuerdo Premium"
+            />
+            <div class="product-actions">
+              <button class="product-action-btn">Ver Detalles</button>
+              <button class="product-action-btn">Añadir</button>
+            </div>
+          </div>
+          <div class="product-info">
+            <p class="product-category">Souvenirs</p>
+            <h4 class="product-name">Set Recuerdo Premium</h4>
+            <p class="product-price">€75.00</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonial -->
+    <section class="testimonial-section">
+      <div class="testimonial-inner">
+        <div class="section-title">
+          <span>Testimonios</span>
+        </div>
+        <div class="testimonial-stars">
+          <svg viewBox="0 0 24 24">
+            <path
+              d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+            />
+          </svg>
+          <svg viewBox="0 0 24 24">
+            <path
+              d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+            />
+          </svg>
+          <svg viewBox="0 0 24 24">
+            <path
+              d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+            />
+          </svg>
+          <svg viewBox="0 0 24 24">
+            <path
+              d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+            />
+          </svg>
+          <svg viewBox="0 0 24 24">
+            <path
+              d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+            />
+          </svg>
+        </div>
+        <p class="testimonial-quote">
+          "El vestido de mi pequeña fue absolutamente perfecto. La calidad
+          superó todas mis expectativas y el servicio fue excepcional. Todos los
+          invitados quedaron maravillados."
+        </p>
+        <p class="testimonial-author">
+          <strong>María García</strong>
+          Bautizo de Sofía, Madrid
+        </p>
+      </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="newsletter-section">
+      <div class="newsletter-inner">
+        <h2>Únete a Nuestra Familia</h2>
+        <p>
+          Suscríbete para recibir ofertas exclusivas, novedades y un 10% de
+          descuento en tu primera compra.
+        </p>
+        <form class="newsletter-form">
+          <input type="email" placeholder="Tu correo electrónico" />
+          <button type="submit">Suscribirse</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <a href="#" class="logo">Bendición<span>.</span></a>
+          <p>
+            Creando momentos inolvidables para las celebraciones más especiales
+            de tu familia desde 1985.
+          </p>
+          <div class="footer-social">
+            <a href="#">
+              <svg
+                width="18"
+                height="18"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <path
+                  d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"
+                />
+              </svg>
+            </a>
+            <a href="#">
+              <svg
+                width="18"
+                height="18"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <path
+                  d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"
+                />
+              </svg>
+            </a>
+            <a href="#">
+              <svg
+                width="18"
+                height="18"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <path
+                  d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 5.079 3.158 9.417 7.618 11.162-.105-.949-.199-2.403.041-3.439.219-.937 1.406-5.957 1.406-5.957s-.359-.72-.359-1.781c0-1.663.967-2.911 2.168-2.911 1.024 0 1.518.769 1.518 1.688 0 1.029-.653 2.567-.992 3.992-.285 1.193.6 2.165 1.775 2.165 2.128 0 3.768-2.245 3.768-5.487 0-2.861-2.063-4.869-5.008-4.869-3.41 0-5.409 2.562-5.409 5.199 0 1.033.394 2.143.889 2.741.099.12.112.225.085.345-.09.375-.293 1.199-.334 1.363-.053.225-.172.271-.401.165-1.495-.69-2.433-2.878-2.433-4.646 0-3.776 2.748-7.252 7.92-7.252 4.158 0 7.392 2.967 7.392 6.923 0 4.135-2.607 7.462-6.233 7.462-1.214 0-2.354-.629-2.758-1.379l-.749 2.848c-.269 1.045-1.004 2.352-1.498 3.146 1.123.345 2.306.535 3.55.535 6.607 0 11.985-5.365 11.985-11.987C23.97 5.39 18.592.026 11.985.026L12.017 0z"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div class="footer-column">
+          <h4>Tienda</h4>
+          <ul>
+            <li><a href="#">Trajes Niño</a></li>
+            <li><a href="#">Vestidos Niña</a></li>
+            <li><a href="#">Zapatos</a></li>
+            <li><a href="#">Souvenirs</a></li>
+            <li><a href="#">Accesorios</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4>Información</h4>
+          <ul>
+            <li><a href="#">Sobre Nosotros</a></li>
+            <li><a href="#">Envíos y Devoluciones</a></li>
+            <li><a href="#">Guía de Tallas</a></li>
+            <li><a href="#">Preguntas Frecuentes</a></li>
+            <li><a href="#">Blog</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4>Contacto</h4>
+          <ul>
+            <li><a href="#">+34 912 345 678</a></li>
+            <li><a href="#">info@bendicion.es</a></li>
+            <li><a href="#">Calle Gran Vía 42</a></li>
+            <li><a href="#">28013 Madrid, España</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 Bendición. Todos los derechos reservados.</p>
+        <div class="payment-methods">
+          <span>Pago seguro</span>
+          <svg width="40" height="24" viewBox="0 0 40 24" fill="none">
+            <rect width="40" height="24" rx="4" fill="#1A1F71" />
+            <text x="8" y="16" fill="white" font-size="10" font-weight="bold">
+              VISA
+            </text>
+          </svg>
+          <svg width="40" height="24" viewBox="0 0 40 24" fill="none">
+            <rect width="40" height="24" rx="4" fill="#EB001B" />
+            <circle cx="16" cy="12" r="7" fill="#EB001B" />
+            <circle cx="24" cy="12" r="7" fill="#F79E1B" />
+          </svg>
+          <svg width="40" height="24" viewBox="0 0 40 24" fill="none">
+            <rect width="40" height="24" rx="4" fill="#003087" />
+            <text x="6" y="15" fill="white" font-size="8" font-weight="bold">
+              PayPal
+            </text>
+          </svg>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
+
