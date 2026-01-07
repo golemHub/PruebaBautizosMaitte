@@ -1,97 +1,58 @@
 ---
-import '../styles/global.css';
+import "../styles/global.css";
+import CartButton from "../components/CartButton.tsx";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
 const { title } = Astro.props;
 ---
-<!DOCTYPE html>
+
+<!doctype html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{title}</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
-</head>
-<body>
-  <header>
-    <div class="header-inner">
-      <a href="#" class="logo">Bautizos Maitte<span>.</span></a>
-      <nav>
-        <a href="#">Inicio</a>
-        <a href="#">Colecciones</a>
-        <a href="#">Niños</a>
-        <a href="#">Niñas</a>
-        <a href="#">Souvenirs</a>
-        <a href="#">Contacto</a>
-      </nav>
-      <div class="header-actions">
-        <a href="#">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
-        </a>
-        <a href="#"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></a>
-        <a href="#" class="cart-icon">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
-          <span class="cart-badge">2</span>
-        </a>
-      </div>
-    </div>
-  </header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Montserrat:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <Header />
+    <slot />
+    <Footer />
+  </body>
 
-  <slot />
+  <style>
+    :root {
+      --color-cream: #faf8f5;
+      --color-white: #ffffff;
+      --color-gold: #c9a962;
+      --color-gold-light: #e8dcc8;
+      --color-charcoal: #2c2c2c;
+      --color-gray: #6b6b6b;
+      --color-gray-light: #9a9a9a;
+      --font-heading: "Cormorant Garamond", serif;
+      --font-body: "Montserrat", sans-serif;
+    }
 
-  <footer>
-    <div class="footer-inner">
-      <div class="footer-brand">
-        <a href="#" class="logo">Bautizos Maitte<span>.</span></a>
-        <p>Acompañándote en los momentos más sagrados de tu familia desde 1985.</p>
-        <div class="footer-social">
-          </div>
-      </div>
-      <div class="footer-column">
-        <h4>Tienda</h4>
-        <ul>
-          <li><a href="#">Trajes Niño</a></li>
-          <li><a href="#">Vestidos Niña</a></li>
-          <li><a href="#">Zapatos</a></li>
-        </ul>
-      </div>
-      <div class="footer-column">
-        <h4>Información</h4>
-        <ul>
-          <li><a href="#">Envíos y Devoluciones</a></li>
-          <li><a href="#">Guía de Tallas</a></li>
-        </ul>
-      </div>
-      <div class="footer-column">
-        <h4>Contacto</h4>
-        <ul>
-          <li>info@bautizosmaitte.es</li>
-          <li>Madrid, España</li>
-        </ul>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <p>© 2025 Bautizos Maitte. Todos los derechos reservados.</p>
-      <div class="payment-methods">
-        <span>Pago seguro</span>
-        <svg width="40" height="24" viewBox="0 0 40 24" fill="none"><rect width="40" height="24" rx="4" fill="#1A1F71"/><text x="8" y="16" fill="white" font-size="10" font-weight="bold">VISA</text></svg>
-        <svg width="40" height="24" viewBox="0 0 40 24" fill="none"><rect width="40" height="24" rx="4" fill="#EB001B"/><circle cx="16" cy="12" r="7" fill="#EB001B"/><circle cx="24" cy="12" r="7" fill="#F79E1B"/></svg>
-        <svg width="40" height="24" viewBox="0 0 40 24" fill="none"><rect width="40" height="24" rx="4" fill="#003087"/><text x="6" y="15" fill="white" font-size="8" font-weight="bold">PayPal</text></svg>
-      </div>
-    </div>
-  </footer>
-</body>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: var(--font-body);
+      background-color: var(--color-cream);
+      color: var(--color-charcoal);
+      line-height: 1.6;
+    }
+  </style>
 </html>
-
-<style>
-  /* Aquí va el CSS del Header y Footer de tu index.html */
-  header { position: fixed; top: 0; left: 0; right: 0; background: var(--color-cream); z-index: 1000; border-bottom: 1px solid var(--color-gold-light); }
-  .header-inner { max-width: 1400px; margin: 0 auto; padding: 1.25rem 2rem; display: flex; justify-content: space-between; align-items: center; }
-  .logo { font-family: var(--font-heading); font-size: 2rem; font-weight: 600; color: var(--color-charcoal); text-decoration: none; letter-spacing: 0.05em; }
-  .logo span { color: var(--color-gold); }
-  nav { display: flex; align-items: center; gap: 2.5rem; }
-  nav a { font-size: 0.8rem; font-weight: 500; color: var(--color-gray); text-decoration: none; text-transform: uppercase; letter-spacing: 0.1em; }
-  .footer-inner { max-width: 1400px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 4rem; margin-bottom: 3rem; }
-  .payment-methods { display: flex; gap: 1rem; align-items: center; }
-  /* ... resto del CSS de layout ... */
-</style>

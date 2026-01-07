@@ -1,0 +1,750 @@
+---
+import Layout from "../../layouts/Layout.astro";
+---
+
+<Layout>
+  <!-- Product Section -->
+  <section class="product-section">
+    <!-- Breadcrumb -->
+    <div class="breadcrumb">
+      <a href="index.html">Inicio</a>
+      <span>/</span>
+      <a href="productos.html">Productos</a>
+      <span>/</span>
+      <a href="#">Vestidos Niña</a>
+      <span>/</span>
+      <span>Vestido Celestial</span>
+    </div>
+
+    <!-- Product Content -->
+    <div class="product-content">
+      <!-- Gallery -->
+      <div class="product-gallery">
+        <div class="thumbnail-list">
+          <div class="thumbnail active">
+            <img src="/placeholder.svg?height=200&width=160" alt="Vista 1" />
+          </div>
+          <div class="thumbnail">
+            <img src="/placeholder.svg?height=200&width=160" alt="Vista 2" />
+          </div>
+          <div class="thumbnail">
+            <img src="/placeholder.svg?height=200&width=160" alt="Vista 3" />
+          </div>
+          <div class="thumbnail">
+            <img src="/placeholder.svg?height=200&width=160" alt="Vista 4" />
+          </div>
+        </div>
+        <div class="main-image">
+          <img
+            src="/placeholder.svg?height=800&width=600"
+            alt="Vestido Celestial"
+          />
+        </div>
+      </div>
+
+      <!-- Product Info -->
+      <div class="product-info">
+        <p class="product-category">Vestidos Niña</p>
+        <h1 class="product-title">Vestido Celestial de Seda y Encaje</h1>
+
+        <div class="product-rating">
+          <div class="stars">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+              ></path>
+            </svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+              ></path>
+            </svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+              ></path>
+            </svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+              ></path>
+            </svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+              ></path>
+            </svg>
+          </div>
+          <span class="rating-count">(47 reseñas)</span>
+        </div>
+
+        <p class="product-price">€189.00</p>
+
+        <p class="product-description">
+          Nuestro vestido insignia, confeccionado a mano con los más finos
+          materiales. Seda italiana de primera calidad combinada con delicados
+          encajes franceses, creando una pieza única que será el centro de todas
+          las miradas en ese día tan especial.
+        </p>
+
+        <!-- Options -->
+        <div class="product-options">
+          <div class="option-group">
+            <label class="option-label">Talla</label>
+            <div class="option-buttons">
+              <button class="option-btn">3M</button>
+              <button class="option-btn">6M</button>
+              <button class="option-btn active">12M</button>
+              <button class="option-btn">18M</button>
+              <button class="option-btn">24M</button>
+            </div>
+          </div>
+
+          <div class="option-group">
+            <label class="option-label">Color</label>
+            <div class="option-buttons">
+              <button
+                class="option-btn color-btn active"
+                style="background: #FAF8F5;"></button>
+              <button class="option-btn color-btn" style="background: #E8DCC8;"
+              ></button>
+              <button class="option-btn color-btn" style="background: #FFE5E5;"
+              ></button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Actions -->
+        <div class="product-actions">
+          <div class="quantity-selector">
+            <button>−</button>
+            <span>1</span>
+            <button>+</button>
+          </div>
+          <button class="btn-add-cart">Añadir al Carrito</button>
+          <button class="btn-favorite">
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+            >
+              <path
+                d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"
+              ></path>
+            </svg>
+          </button>
+        </div>
+
+        <!-- Features -->
+        <div class="product-features">
+          <div class="feature-item">
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+            >
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+              <circle cx="12" cy="10" r="3"></circle>
+            </svg>
+            <span>Envío gratuito en pedidos superiores a €100</span>
+          </div>
+          <div class="feature-item">
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+            >
+              <path d="M3 9h18v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V9Z"></path>
+              <path
+                d="m3 9 2.45-4.9A2 2 0 0 1 7.24 3h9.52a2 2 0 0 1 1.8 1.1L21 9"
+              ></path>
+              <path d="M12 3v6"></path>
+            </svg>
+            <span>Incluye caja de regalo premium</span>
+          </div>
+          <div class="feature-item">
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+            >
+              <path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"
+              ></path>
+              <path d="M21 3v5h-5"></path>
+              <path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"
+              ></path>
+              <path d="M3 21v-5h5"></path>
+            </svg>
+            <span>Devolución gratuita en 30 días</span>
+          </div>
+          <div class="feature-item">
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+            >
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"></path>
+            </svg>
+            <span>100% Materiales premium certificados</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tabs -->
+    <div class="product-tabs">
+      <div class="tab-buttons">
+        <button class="tab-btn active">Descripción</button>
+        <button class="tab-btn">Cuidados</button>
+        <button class="tab-btn">Envío</button>
+      </div>
+
+      <div class="tab-content active">
+        <p>
+          El Vestido Celestial es nuestra creación más preciada, diseñada
+          especialmente para hacer de ese día único algo verdaderamente
+          inolvidable. Cada vestido está confeccionado a mano en nuestro atelier
+          con seda italiana 100% natural y encajes franceses de Calais,
+          conocidos mundialmente por su delicadeza y belleza.
+        </p>
+        <p>
+          Los detalles incluyen bordados a mano con hilo de seda, botones
+          forrados de nácar auténtico y un forro interior de algodón orgánico
+          que garantiza la máxima comodidad para tu pequeña durante toda la
+          celebración.
+        </p>
+        <p>
+          Este vestido representa nuestra dedicación a la excelencia y nuestro
+          compromiso de crear piezas que se convertirán en tesoros familiares
+          para generaciones futuras.
+        </p>
+      </div>
+
+      <div class="tab-content">
+        <p>
+          <strong>Lavado:</strong> Limpieza en seco exclusivamente. No lavar en lavadora.
+        </p>
+        <p>
+          <strong>Planchado:</strong> Planchar a baja temperatura del revés con un
+          paño protector.
+        </p>
+        <p>
+          <strong>Almacenamiento:</strong> Guardar en lugar fresco y seco, preferiblemente
+          en una funda de algodón transpirable.
+        </p>
+        <p>
+          <strong>Manchas:</strong> Tratar inmediatamente con un paño húmedo suave.
+          Para manchas persistentes, consultar con un especialista en limpieza de
+          prendas delicadas.
+        </p>
+      </div>
+
+      <div class="tab-content">
+        <p>
+          <strong>Envío estándar:</strong> 3-5 días laborables - €9.00 (Gratis en
+          pedidos superiores a €100)
+        </p>
+        <p><strong>Envío express:</strong> 1-2 días laborables - €19.00</p>
+        <p>
+          <strong>Envío internacional:</strong> 5-10 días laborables - Según destino
+        </p>
+        <p>
+          Todos nuestros envíos incluyen seguro completo y número de
+          seguimiento. Las prendas se envían cuidadosamente empaquetadas en
+          nuestras cajas de regalo signature.
+        </p>
+      </div>
+    </div>
+
+    <!-- Related Products -->
+    <div class="related-products">
+      <h2 class="section-title">También te Puede Gustar</h2>
+      <div class="products-grid">
+        <div class="product-card">
+          <div class="product-image">
+            <img
+              src="/placeholder.svg?height=400&width=300"
+              alt="Traje Romeo"
+            />
+          </div>
+          <div class="product-card-info">
+            <p class="product-card-category">Trajes Niño</p>
+            <h4 class="product-card-name">Traje Romeo</h4>
+            <p class="product-card-price">€129.00</p>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-image">
+            <img
+              src="/placeholder.svg?height=400&width=300"
+              alt="Vestido Angelina"
+            />
+          </div>
+          <div class="product-card-info">
+            <p class="product-card-category">Vestidos Niña</p>
+            <h4 class="product-card-name">Vestido Angelina</h4>
+            <p class="product-card-price">€135.00</p>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-image">
+            <img
+              src="/placeholder.svg?height=400&width=300"
+              alt="Zapatos Premium"
+            />
+          </div>
+          <div class="product-card-info">
+            <p class="product-card-category">Zapatos</p>
+            <h4 class="product-card-name">Primeros Pasos</h4>
+            <p class="product-card-price">€49.00</p>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-image">
+            <img
+              src="/placeholder.svg?height=400&width=300"
+              alt="Set Recuerdo"
+            />
+          </div>
+          <div class="product-card-info">
+            <p class="product-card-category">Souvenirs</p>
+            <h4 class="product-card-name">Set Recuerdo</h4>
+            <p class="product-card-price">€75.00</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  /* Product Section */
+  .product-section {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+  }
+
+  .breadcrumb {
+    margin-bottom: 2rem;
+    display: flex;
+    gap: 0.5rem;
+    font-size: 0.875rem;
+    color: var(--gray);
+  }
+
+  .breadcrumb a {
+    color: var(--gray);
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+
+  .breadcrumb a:hover {
+    color: var(--gold);
+  }
+
+  .product-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    margin-bottom: 6rem;
+  }
+
+  /* Gallery */
+  .product-gallery {
+    display: flex;
+    gap: 1rem;
+  }
+
+  .thumbnail-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .thumbnail {
+    width: 80px;
+    height: 100px;
+    border: 2px solid transparent;
+    cursor: pointer;
+    overflow: hidden;
+    background: var(--cream);
+    transition: border-color 0.3s;
+  }
+
+  .thumbnail.active,
+  .thumbnail:hover {
+    border-color: var(--gold);
+  }
+
+  .thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .main-image {
+    flex: 1;
+    aspect-ratio: 3/4;
+    overflow: hidden;
+    background: var(--cream);
+  }
+
+  .main-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  /* Product Info */
+  .product-info {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .product-category {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--gray-light);
+    margin-bottom: 0.5rem;
+  }
+
+  .product-title {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: var(--charcoal);
+    margin-bottom: 1rem;
+  }
+
+  .product-rating {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .stars {
+    display: flex;
+    gap: 0.25rem;
+    color: var(--gold);
+  }
+
+  .rating-count {
+    font-size: 0.875rem;
+    color: var(--gray);
+  }
+
+  .product-price {
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--gold);
+    margin-bottom: 1.5rem;
+  }
+
+  .product-description {
+    color: var(--gray);
+    line-height: 1.8;
+    margin-bottom: 2rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid var(--gold-light);
+  }
+
+  /* Options */
+  .product-options {
+    margin-bottom: 2rem;
+  }
+
+  .option-group {
+    margin-bottom: 1.5rem;
+  }
+
+  .option-label {
+    display: block;
+    font-size: 0.875rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 0.75rem;
+  }
+
+  .option-buttons {
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+  }
+
+  .option-btn {
+    padding: 0.75rem 1.5rem;
+    border: 1px solid var(--gold-light);
+    background: var(--white);
+    color: var(--charcoal);
+    font-family: "Montserrat", sans-serif;
+    font-size: 0.875rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+
+  .option-btn:hover,
+  .option-btn.active {
+    border-color: var(--gold);
+    background: var(--gold);
+    color: var(--white);
+  }
+
+  .color-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    padding: 0;
+    position: relative;
+  }
+
+  .color-btn.active::after {
+    content: "";
+    position: absolute;
+    inset: -4px;
+    border: 2px solid var(--gold);
+    border-radius: 50%;
+  }
+
+  /* Quantity & Actions */
+  .product-actions {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .quantity-selector {
+    display: flex;
+    align-items: center;
+    border: 1px solid var(--gold-light);
+  }
+
+  .quantity-selector button {
+    width: 50px;
+    height: 50px;
+    background: none;
+    border: none;
+    color: var(--charcoal);
+    font-size: 1.25rem;
+    cursor: pointer;
+    transition: color 0.3s;
+  }
+
+  .quantity-selector button:hover {
+    color: var(--gold);
+  }
+
+  .quantity-selector span {
+    width: 60px;
+    text-align: center;
+    font-weight: 500;
+    border-left: 1px solid var(--gold-light);
+    border-right: 1px solid var(--gold-light);
+  }
+
+  .btn-add-cart {
+    flex: 1;
+    padding: 1rem 2rem;
+    background: var(--gold);
+    color: var(--white);
+    border: none;
+    font-family: "Montserrat", sans-serif;
+    font-size: 0.875rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+
+  .btn-add-cart:hover {
+    background: var(--charcoal);
+  }
+
+  .btn-favorite {
+    width: 50px;
+    height: 50px;
+    background: var(--white);
+    border: 1px solid var(--gold-light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+
+  .btn-favorite:hover {
+    border-color: var(--gold);
+    background: var(--gold);
+    color: var(--white);
+  }
+
+  /* Features */
+  .product-features {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--gold-light);
+  }
+
+  .feature-item {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    font-size: 0.875rem;
+    color: var(--gray);
+  }
+
+  .feature-item svg {
+    flex-shrink: 0;
+    color: var(--gold);
+  }
+
+  /* Tabs */
+  .product-tabs {
+    border-top: 1px solid var(--gold-light);
+    margin-bottom: 6rem;
+  }
+
+  .tab-buttons {
+    display: flex;
+    gap: 3rem;
+    border-bottom: 1px solid var(--gold-light);
+  }
+
+  .tab-btn {
+    padding: 1.5rem 0;
+    background: none;
+    border: none;
+    border-bottom: 2px solid transparent;
+    font-family: "Montserrat", sans-serif;
+    font-size: 0.875rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--gray);
+    cursor: pointer;
+    transition: all 0.3s;
+    position: relative;
+    top: 1px;
+  }
+
+  .tab-btn.active {
+    color: var(--charcoal);
+    border-bottom-color: var(--gold);
+  }
+
+  .tab-content {
+    padding: 2rem 0;
+    display: none;
+  }
+
+  .tab-content.active {
+    display: block;
+  }
+
+  .tab-content p {
+    color: var(--gray);
+    line-height: 1.8;
+    margin-bottom: 1rem;
+  }
+
+  /* Related Products */
+  .related-products {
+    margin-bottom: 4rem;
+  }
+
+  .section-title {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 2.5rem;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+
+  .products-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+  }
+
+  .product-card {
+    background: var(--white);
+    border: 1px solid var(--gold-light);
+    transition:
+      transform 0.3s,
+      box-shadow 0.3s;
+  }
+
+  .product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(201, 169, 110, 0.15);
+  }
+
+  .product-image {
+    position: relative;
+    overflow: hidden;
+    background: var(--cream);
+    aspect-ratio: 3/4;
+  }
+
+  .product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s;
+  }
+
+  .product-card:hover .product-image img {
+    transform: scale(1.05);
+  }
+
+  .product-card-info {
+    padding: 1.5rem;
+  }
+
+  .product-card-category {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--gray-light);
+    margin-bottom: 0.5rem;
+  }
+
+  .product-card-name {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--charcoal);
+    margin-bottom: 0.75rem;
+  }
+
+  .product-card-price {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: var(--gold);
+  }
+</style>

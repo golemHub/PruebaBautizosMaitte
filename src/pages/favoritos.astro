@@ -1,0 +1,36 @@
+---
+import Layout from "../layouts/Layout.astro"
+import Favorites from "../components/Favorites.tsx"
+---
+
+<Layout title="Mis Favoritos">
+  <main>
+    <div class="page-header">
+      <h1>Mis Favoritos</h1>
+    </div>
+
+    <Favorites client:load />
+  </main>
+</Layout>
+
+<style>
+  main {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+    padding-top: calc(4rem + 84px); /* Ajuste para el header fijo */
+  }
+
+  .page-header {
+    text-align: center;
+    margin-bottom: 4rem;
+  }
+
+  .page-header h1 {
+    font-family: var(--font-heading);
+    font-size: 3.5rem;
+    font-weight: 400;
+    color: var(--color-charcoal);
+    margin-bottom: 1rem;
+  }
+</style>

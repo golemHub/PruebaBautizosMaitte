@@ -1,0 +1,25 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import ShopCollection from "../../components/ProductsGrid.tsx";
+import { GetProductsAll } from "../../api/GetProductsAll";
+import { GetCategories } from "../../api/GetCategories";
+
+// Obtener productos y categorías iniciales
+const initialProducts = await GetProductsAll({
+  page: 1,
+  pageSize: 12,
+  sortBy: "createdAt",
+  sortOrder: "desc",
+});
+
+const categoriesData = await GetCategories();
+---
+
+<Layout>
+  <ShopCollection 
+    client:load 
+    initialProducts={initialProducts.data}
+    categories={categoriesData.data}
+  />
+</Layout>
+

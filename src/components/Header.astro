@@ -1,0 +1,122 @@
+---
+import CartButton from "./CartButton";
+import SearchButton from "./SearchButton";
+import FavoritesButton from "./FavoritesButton";
+---
+
+<header>
+  <div class="header-inner">
+    <a href="/" class="logo">Bautizos Maitte<span>.</span></a>
+
+    <nav>
+      <a href="/">Inicio</a>
+      <a href="/productos">Colecciones</a>
+      <a href="/productos?niños">Niños</a>
+      <a href="/productos?niñas">Niñas</a>
+      <a href="/productos?souvenirs">Souvenirs</a>
+      <a href="/contacto">Contacto</a>
+    </nav>
+
+    <div class="header-actions">
+      <SearchButton client:load />
+      <FavoritesButton client:load />
+      <CartButton client:load/>
+    </div>
+  </div>
+</header>
+
+<style>
+  header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: var(--color-cream);
+    z-index: 1000;
+    border-bottom: 1px solid var(--color-gold-light);
+  }
+
+  .header-inner {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 1.25rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logo {
+    font-family: var(--font-heading);
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--color-charcoal);
+    text-decoration: none;
+    letter-spacing: 0.05em;
+  }
+
+  .logo span {
+    color: var(--color-gold);
+  }
+
+  nav {
+    display: flex;
+    align-items: center;
+    gap: 2.5rem;
+  }
+
+  nav a {
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: var(--color-gray);
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    transition: color 0.3s ease;
+  }
+
+  nav a:hover {
+    color: var(--color-gold);
+  }
+
+  .header-actions {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  .header-actions a {
+    color: var(--color-charcoal);
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+
+  .header-actions a:hover {
+    color: var(--color-gold);
+  }
+
+  .cart-icon,
+  .favorites-icon {
+    position: relative;
+  }
+
+  .cart-badge,
+  .favorites-badge {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background: var(--color-gold);
+    color: var(--color-white);
+    font-size: 0.65rem;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  @media (max-width: 1170px) {
+    nav {
+      display: none;
+    }
+</style>
